@@ -9,5 +9,25 @@ function handleClick(e) {
 
 /* End Given Code, don't edit above here...*/
 
+function greet(time) {
+  const hourInString = time.split(":");
+  const hoursInInt = parseInt(hourInString,10);
+
+  if (hoursInInt < 12) {
+    return displayMessage('Good Morning');
+  }
+  else if (hoursInInt >=12 && hoursInInt <= 17){
+    return displayMessage('Good Afternoon');
+  }
+  else {
+  return displayMessage('Good Evening');
+  }
+}
+
 /* Write your implementation of greet() */
 /* Write your implementation of displayMessage() */
+function displayMessage(msg) {
+  const element = document.getElementById("greeting");
+  element.innerText = msg;
+  return msg;
+}
