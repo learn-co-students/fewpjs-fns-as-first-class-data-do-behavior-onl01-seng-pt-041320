@@ -21,7 +21,7 @@ function greet(time) {
 }
 
 function displayMessage(argument) {
-  let content = document.querySelector("h1#greeting");
+  let content = document.getElementById("greeting");
   content.innerText = argument
 }
 /* Write your implementation of greet() */
